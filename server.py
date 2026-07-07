@@ -11,6 +11,8 @@ from mcp.server import FastMCP
 import requests
 from typing import Optional
 from pydantic import BaseModel, Field
+import os
+
 
 # Initialize the MCP server
 mcp = FastMCP("Recall Checker")
@@ -142,4 +144,4 @@ def get_recall_details(recall_id: str) -> RecallDetails:
 
 
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run(transport="streamable-http", host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
