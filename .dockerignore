@@ -1,0 +1,15 @@
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.venv
+venv
+.git
+.gitignore
+README.md
+test_server.py
+deploy.py
+fly.toml
+claude_desktop_config.json
+.env
+.DS_Store

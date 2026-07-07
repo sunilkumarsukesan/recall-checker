@@ -1,0 +1,14 @@
+[project]
+name = "mcp-recall-checker"
+version = "0.1.0"
+description = "MCP Server for CPSC product recall checking"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "requests>=2.31.0",
+    "pydantic>=2.0.0",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
