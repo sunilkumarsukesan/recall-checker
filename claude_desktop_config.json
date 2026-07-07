@@ -1,9 +1,10 @@
 {
   "mcpServers": {
     "recall-checker": {
-      "command": "F:\\AI_ML\\MCP Servers\\recall-checker\\venv\\Scripts\\python.exe",
+      "command": "npx",
       "args": [
-        "F:\\AI_ML\\MCP Servers\\recall-checker\\server.py"
+        "mcp-remote",
+        "https://recall-checker.fly.dev/mcp"
       ]
     }
   }

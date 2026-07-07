@@ -15,7 +15,7 @@ import os
 
 
 # Initialize the MCP server
-mcp = FastMCP("Recall Checker")
+mcp = FastMCP("Recall Checker", host="0.0.0.0", port=8000, stateless_http=True)
 
 # Mock recall database (v1) - Replace with CPSC API once endpoint access is resolved
 MOCK_RECALLS = {
@@ -144,4 +144,4 @@ def get_recall_details(recall_id: str) -> RecallDetails:
 
 
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http", host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+    mcp.run(transport="streamable-http")
