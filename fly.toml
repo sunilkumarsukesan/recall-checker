@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for recall-checker-mcp-tidy-shape-8134 on 2026-07-08T02:09:54+08:00
+# fly.toml app configuration file generated for recall-checker-4fe8xq on 2026-07-07T18:35:05Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'recall-checker-mcp-tidy-shape-8134'
-primary_region = 'ord'
+app = 'recall-checker-4fe8xq'
+primary_region = 'ams'
 
 [build]
   dockerfile = 'Dockerfile'
@@ -16,6 +16,14 @@ primary_region = 'ord'
 [env]
   LOG_LEVEL = 'info'
   PYTHONUNBUFFERED = '1'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
 
 [[vm]]
   memory = '256mb'
